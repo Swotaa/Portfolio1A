@@ -5,15 +5,18 @@ html, body{
     background-color: #fafafa;
 }
 body{
+    margin: 80px 0 0 0;
     display: flex;
     flex-direction: column;
     height: 100%;
+    font-size: 16pt;
 }
 .navbar{
     background-color: #f3f4f6;
     padding: 10px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
 }
@@ -43,5 +46,35 @@ body{
     text-decoration: underline;
     color: blueviolet;
 }
-.elements{
+.identity a{
+    width: 30%;
+    float: left;
+}
+.identity img{
+    border-radius: 30% 40%;
+    /*width: 200px;*/
+    width: 20%;
+    margin: 4% 0% 0% 3%;
+}
+.description{
+    width: 70%;
+    float: right;
+    background-color: rgb(151, 79, 219);
+    border-radius: 30px;
+    margin: 4% 3% 10px 10px;
+}
+.description p{
+    margin: 15px 15px 15px 15px;
+}
+
+body p{
+    margin: 0 20px 0 20px;
+}
+
+.footer-content{
+    background: rgb(117,14,121);
+    background: linear-gradient(90deg, rgba(117,14,121,1) 0%, rgba(145,17,163,1) 47%, rgba(166,60,203,1) 100%);
+    box-shadow: 20px black;
+    position: relative;
+    bottom: 0;
 }

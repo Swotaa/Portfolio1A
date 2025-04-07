@@ -2,6 +2,12 @@
 /* <weight>: Use a value from 300 to 900
 / <uniquifier>: Use a unique and descriptive class name*/
 
+.winky-sans-body {
+  font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
 .winky-sans-navbar {
   font-family: "Winky Sans", sans-serif;
   font-optical-sizing: auto;
