@@ -5,23 +5,47 @@
         <link rel="icon" href="">
         <link rel="stylesheet" href="/styles/style.css">
         <link rel="stylesheet" href="/styles/fonts.css">
+        <link rel="stylesheet" href="/styles/mobile.css">
+        <link rel="script" href="/scripts/script.js">
+        <script>
+            function toggleMenu() {
+    const menu = document.getElementById('menu');
+    const hamburger = document.querySelector('.hamburger');
+    menu.classList.toggle('show');
+    hamburger.classList.toggle('active');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuItems = document.querySelectorAll('#menu li a');
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const menu = document.getElementById('menu');
+            const hamburger = document.querySelector('.hamburger');
+            menu.classList.remove('show');
+            hamburger.classList.remove('active');
+        });
+    });
+});
+        </script>
     </head>
     <body class="winky-sans-body">
         <header>
-            <div class="mobileHeader">
-                <a class="name winky-sans-name">Yanis.O</a>
-                <button class="hamburger">Menu</button>
-            </div>
             <nav class="navbar">
-                <ul>
-                    <a class="name winky-sans-name namenavbar">Yanis.O</a>
+                <a class="namemobile winky-sans-name">Yanis.O</a>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id="menu">
+                    <a class="winky-sans-name name">Yanis.O</a>
                     <li><a class="links winky-sans-navbar" href="#">À propos</a></li>
                     <li><a class="links winky-sans-navbar">Projets</a></li>
                     <li><a class="links winky-sans-navbar">Compétences</a></li>
                     <li><a class="links winky-sans-navbar" href="https://www.linkedin.com/in/yanis-ossedat-770ba7336/">Contact</a></li>
                 </ul>
             </nav>
-        </header class="header">
+        </header>
         <div class="identity">
             <img src="/images/rdj.jpg" alt="Une photo de moi">
             <aside class="description">
