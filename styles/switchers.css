@@ -1,0 +1,129 @@
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.language-button {
+    background-color: var(--button);
+    color: var(--text);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.language-button:hover {
+    background-color: var(--links);
+    color: var(--bg);
+    transform: rotate(15deg);
+}
+
+.language-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.language-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--bg);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    margin-top: 8px;
+    overflow: hidden;
+    min-width: 120px;
+}
+
+.language-menu.active {
+    display: block;
+    animation: menuFadeIn 0.2s ease;
+}
+
+.language-option {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    color: var(--text);
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.language-option:hover {
+    background-color: var(--menu-bg);
+}
+
+@keyframes menuFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 80px;
+    z-index: 1000;
+}
+
+.theme-button {
+    background-color: var(--button);
+    color: var(--text);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-button:hover {
+    background-color: var(--links);
+    color: var(--bg);
+}
+
+.theme-button svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.5s ease;
+}
+
+.theme-button:hover svg {
+    transform: rotate(180deg);
+}
+
+/* Hide/show icons based on theme */
+.theme-button .sun-icon {
+    display: none;
+}
+
+.theme-button .moon-icon {
+    display: block;
+}
+
+.dark-theme .theme-button .sun-icon {
+    display: block;
+}
+
+.dark-theme .theme-button .moon-icon {
+    display: none;
+}

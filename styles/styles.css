@@ -1,0 +1,221 @@
+/* Définition des variables (notamment pour le changement de thèmes) */
+
+:root {
+    --bg: #fafafa; 
+    --text: #292b2a;
+    --button: #269e32;
+    --menu-bg: #f3f4f6;
+    --links: #6232a8;
+    --menu-text: #269e32;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --footer: #269e32;
+}
+
+.dark-theme {
+    --bg: #292b2a;
+    --text: #fafafa;
+    --button: #6232a8;
+    --menu-bg: #1b1d1c;
+    --links: #269e32;
+    --menu-text: #6232a8;
+    --shadow: 0 4px 8px rgba(189, 184, 184, 0.2);
+    --footer: #6232a8;
+}
+
+/* Style de la page */
+
+* {
+    transition: background-color 0.6s ease,
+                color 0.6s ease,
+                border-color 0.6s ease,
+                box-shadow 0.6s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    font-size: 16pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.links {
+    text-decoration: none;
+    color: var(--menu-text);
+    text-align: center;
+    flex-direction: column;
+    font-size: 100%;
+    transition: color 0.4s ease;
+}
+
+.links:hover {
+    text-decoration: underline;
+    color: var(--links);
+}
+
+.content {
+    margin-left: 270px;
+    width: calc(100% - 270px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 200px 0px 200px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 32pt;
+    color: var(--text);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: var(--text);
+}
+
+.footer-content {
+    margin-left: 270px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 200px 0px 200px;
+    position: relative;
+    bottom: 0;
+    color: var(--text);
+    background-color: var(--footer);
+}
+
+.buttons {
+    background-color: var(--button);
+    color: var(--bg);
+    padding: 10px 20px;
+    font-size: 18pt;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 5px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    position: absolute;
+    bottom: 20px;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.buttons:hover {
+    background-color: var(--bg);
+    color: var(--text);
+    border: 2px solid var(--links);
+}
+
+.buttons:active {
+    background-color: var(--links);
+    color: var(--bg);
+    border: 2px solid var(--bg);
+}
+
+#contact {
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.contact-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    justify-content: space-between;
+}
+
+.contact-table th,
+.contact-table td {
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    color: var(--text);
+
+}
+
+.contact-table a {
+    text-decoration: none;
+    color: var(--button);
+    transition: color 0.4s ease;
+    font-size: 16pt;
+}
+
+.contact-table a:hover {
+    color: var(--links);
+}
+
+.contact-table th {
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 18pt;
+}
+
+/* Style du menu */
+
+.logo {
+    text-decoration: none;
+}
+.name {
+    font-size: 32pt;
+    color: var(--text);
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.menu {
+    background-color: var(--menu-bg);
+    width: 270px;
+    height: 100%;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    z-index: 1;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0 0 30px 0;
+    padding: 0;
+    flex: 1;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li {
+    margin-bottom: 30px;
+    display: block;
+    font-size: 24pt;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.hamburger {
+    display: none;
+}

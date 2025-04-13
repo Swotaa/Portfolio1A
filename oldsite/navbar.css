@@ -1,0 +1,30 @@
+.navbar{
+    background-color: #f3f4f6;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+}
+.navbar ul{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1%;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 5px;
+    max-height: 20px;
+}
+.navbar li{
+    width: min-content;
+    white-space: nowrap;
+}
+.navbar-buttons{
+    float: right;
+    display: flex;
+    gap: 10%;
+    max-height: 50%;
+}

@@ -3,77 +3,121 @@
     <head>
         <title>Yanis.O - Portfolio</title>
         <link rel="icon" href="">
-        <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="/styles/styles.css">
         <link rel="stylesheet" href="/styles/fonts.css">
         <link rel="stylesheet" href="/styles/mobile.css">
-        <link rel="script" href="/scripts/script.js">
-        <script>
-            function toggleMenu() {
-    const menu = document.getElementById('menu');
-    const hamburger = document.querySelector('.hamburger');
-    menu.classList.toggle('show');
-    hamburger.classList.toggle('active');
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    const menuItems = document.querySelectorAll('#menu li a');
-    menuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const menu = document.getElementById('menu');
-            const hamburger = document.querySelector('.hamburger');
-            menu.classList.remove('show');
-            hamburger.classList.remove('active');
-        });
-    });
-});
-        </script>
+        <link rel="stylesheet" href="/styles/projectcards.css">
+        <link rel="stylesheet" href="/styles/switchers.css">
     </head>
     <body class="winky-sans-body">
-        <header>
-            <nav class="navbar">
-                <a class="namemobile winky-sans-name">Yanis.O</a>
-                <div class="hamburger" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <aside class="menu">
+            <a class="logo" href="#">
+                <div class="name winky-sans-name">
+                    <span class="dancing-script-name">Y</span>
+                anis &nbsp;
+                    <span class="dancing-script-name">O.</span>
                 </div>
-                <ul id="menu">
-                    <a class="winky-sans-name name">Yanis.O</a>
-                    <li><a class="links winky-sans-navbar" href="#">À propos</a></li>
-                    <li><a class="links winky-sans-navbar">Projets</a></li>
-                    <li><a class="links winky-sans-navbar">Compétences</a></li>
-                    <li><a class="links winky-sans-navbar" href="https://www.linkedin.com/in/yanis-ossedat-770ba7336/">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="identity">
-            <img src="/images/rdj.jpg" alt="Une photo de moi">
-            <aside class="description">
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. 
-                    Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. 
-                    Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. 
-                    Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. 
-                    Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. 
-                    Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. 
-                    Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. 
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. 
-                    Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
-
-                    Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. 
-                    Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula.
-                    </p>
-            </aside>
-        </div>
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
-
-                Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
-                Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet</p>
+            </a>
+            <ul class="menu-list">
+                <li><a class="links winky-sans-navbar" href="#accueil">Accueil</a></li>
+                <li><a class="links winky-sans-navbar" href="#about">À propos</a></li>
+                <li><a class="links winky-sans-navbar" href="#projects">Projets</a></li>
+                <li><a class="links winky-sans-navbar" href="#contact">Contact</a></li>
+            <a class="buttons" href="/assets/CV_Yanis_Ossedat.pdf" target="_blank">Mon CV</a>
+        </aside>
+        <div class="content">
+            <div class="language-switcher">
+                <button class="language-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                    </svg>
+                </button>
+                <div class="language-menu">
+                    <button class="language-option" data-lang="fr">Français</button>
+                    <button class="language-option" data-lang="en">English</button>
+                </div>
+            </div>
+            <div class="theme-switcher">
+                <button class="theme-button">
+                    <!-- Sun icon -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="
+                            M12 3v2
+                            M12 19v2
+                            M3 12h2
+                            M19 12h2
+                            M5.64 5.64l1.41 1.41
+                            M16.95 16.95l1.41 1.41
+                            M5.64 18.36l1.41-1.41
+                            M16.95 7.05l1.41-1.41
+                        "/>
+                    </svg>
+                    <!-- Moon icon -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998z"/>
+                    </svg>
+                </button>
+            </div>
+            <span class="article" id="accueil">
+                <h1 class="winky-sans-navbar">Accueil</h1>
+                <p class="winky-sans-body">Bienvenue sur le portfolio de <span class="dancing-script-body">Y</span>anis <span class="dancing-script-body">O</span>ssedat, vous trouverez ici un aperçu de mes projets et expérimentations dans l'informatique. Ce site à pour but de montrer de manière concrète ce que j'apprends et ce que je crée. Bonne visite !</p>
+            </span>
+            <span class="article" id="about">
+                <h1 class="winky-sans-navbar">À propos</h1>
+                <p class="winky-sans-body">Etudiant en <b>1ᵉʳᵉ année de BUT Informatique</b> à l'<b>IUT d'Aubière</b>. Passioné par l'informatique, les nouvelles technologies ainsi que l'escalade, j'ai choisi de devenir développeur très tôt dans ma vie. J'ai notamment été influencé par les jeux vidéo qui sont une grande source d'inspiration pour moi. Je suis quelqu'un de pation et rigoureux ce qui me permet de fournir des travaux très qualitatifs. Après mon BUT, je souhaiterais devenir développeur d'application.</p>
+            </span>
+            <span class="article" id="projects">
+                <h1 class="winky-sans-navbar">Projets</h1>
+                <div class="projects-container">
+                    <div class="project-card" data-project="university">
+                        <h3>Dékal (Universitaire)</h3>
+                        <img src="/assets/univ1.jpg" alt="Projet Universitaire">
+                        <p class="project-preview">Cliquez pour en savoir plus</p>
+                    </div>
+                    <div class="project-card" data-project="personal">
+                        <h3>ValIA (Personnel)</h3>
+                        <img src="/assets/perso1.jpg" alt="Projet Personnel">
+                        <p class="project-preview">Cliquez pour en savoir plus</p>
+                    </div>
+                </div>
+            
+                <div class="modal" id="projectModal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modal-body">
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <span class="article" id="contact">
+                <h1 class="winky-sans-navbar">Contact</h1>
+                <div class="contact">
+                    <table class="contact-table">
+                        <th>Email</th><th>Téléphone</th>
+                        <tr>
+                            <td><a href="mailto:contact@yanis-ossedat.fr">contact@yanis-ossedat.fr</a></td>
+                            <td><a href="tel:0641355280">06 41 35 52 80</a></td>
+                        </tr>
+                        <th>LinkedIn</th><th>GitHub</th>
+                        <tr>
+                            <td><a href="https://www.linkedin.com/in/yanis-ossedat-770ba7336/" target="_blank">Yanis Ossedat</a></td>
+                            <td><a href="https://github.com/Swotaa" target="_blank">Swotaa</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </span>
         </div>
         <footer class="footer-content">
-            <br>
-            <br>
-            <br>
+            <p>© 2023 Yanis Ossedat. Tous droits réservés.</p>
         </footer>
+        <script src="/scripts/translate.js"></script>
+        <script src="/scripts/scripts.js"></script>
     </body>
-</html>

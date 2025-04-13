@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yanis.O - Portfolio</title>
+        <link rel="icon" href="">
+        <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="/styles/fonts.css">
+        <link rel="stylesheet" href="/styles/mobile.css">
+        <link rel="stylesheet" href="/styles/navbar.css"> 
+    </head>
+    <body class="winky-sans-body">
+        <header>
+            <nav class="navbar">
+                <a class="namemobile winky-sans-name">Yanis.O</a>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id="menu">
+                    <a class="winky-sans-name name">Yanis.O</a>
+                    <li><a class="links winky-sans-navbar" href="#">À propos</a></li>
+                    <li><a class="links winky-sans-navbar">Projets</a></li>
+                    <li><a class="links winky-sans-navbar">Compétences</a></li>
+                    <li><a class="links winky-sans-navbar" href="https://www.linkedin.com/in/yanis-ossedat-770ba7336/" target="_blank">Contact</a></li>
+                    <div class="navbar-buttons">
+                        <button class="theme-button">Dark/Light</button>
+                        <button class="langage-button">Langue</button></li>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="identity">
+            <img src="/images/rdj.jpg" alt="Une photo de moi">
+            <aside class="description">
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. 
+                    Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. 
+                    Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. 
+                    Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. 
+                    Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. 
+                    Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. 
+                    Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. 
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. 
+                    Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+
+                    Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. 
+                    Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula.
+                    </p>
+            </aside>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+
+                Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
+                Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet</p>
+        </div>
+        <footer class="footer-content">
+            <br>
+            <br>
+            <br>
+        </footer>
+        <script>
+            // Script Permettant d'afficher le menu lorsqu'on clique sur le menu 'hamburger' + animations du logo.
+            function toggleMenu() {
+                const menu = document.getElementById('menu');
+                const hamburger = document.querySelector('.hamburger');
+                menu.classList.toggle('show');
+                hamburger.classList.toggle('active');
+            }
+
+            // Script Permettant de cacher le menu lors du clique sur un 'topic'
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuItems = document.querySelectorAll('#menu li a');
+                menuItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        const menu = document.getElementById('menu');
+                        const hamburger = document.querySelector('.hamburger');
+                        menu.classList.remove('show');
+                        hamburger.classList.remove('active');
+                    });
+                });
+            });
+            // Script Permettant de faire disparaître le menu lorsque l'on scroll la page.
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (currentScroll > lastScrollTop) {
+                    navbar.style.top = '-100px';
+                } else {
+                    navbar.style.top = '0';
+                }
+
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            });
+        </script>
+    </body>
+</html>

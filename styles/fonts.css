@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
 /* <weight>: Use a value from 300 to 900
 / <uniquifier>: Use a unique and descriptive class name*/
 
@@ -8,15 +9,31 @@
   font-weight: 300;
   font-style: normal;
 }
+
 .winky-sans-navbar {
   font-family: "Winky Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 350;
+  font-weight: 400;
   font-style: normal;
 }
+
 .winky-sans-name {
-    font-family: "Winky Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 550;
-    font-style: normal;
-  }
+  font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 325;
+  font-style: normal;
+}
+
+.dancing-script-body {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
+}
+
+.dancing-script-name {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
